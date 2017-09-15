@@ -701,7 +701,7 @@
         }
 
         class SagaWithInheritanceChainBase<T, O> : Saga<T>
-            where T : IContainSagaData, new()
+            where T : class, IContainSagaData, new()
             where O : class
         {
             protected override void ConfigureHowToFindSaga(SagaPropertyMapper<T> mapper)
